@@ -1239,7 +1239,7 @@ local function addTagToPlayer(p)
         local head = char:FindFirstChild("Head")
         if not head then return end
         if head:FindFirstChild("CH_UserTag") then return end
-        local nameTag = p:FindFirstChild("JAH_USER") or p:FindFirstChild("CHERRY_USER")
+        local nameTag = p:FindFirstChild("OH_user") or p:FindFirstChild("CHERRY_USER")
         if not nameTag then return end
         local bb = Instance.new("BillboardGui")
         bb.Name = "CH_UserTag"
@@ -1630,7 +1630,7 @@ local TauntHUD, setTauntState = MakeHUDButton("Taunt", "TAUNT", function(on)
                 local TextChatService = game:GetService("TextChatService")
                 local success = pcall(function()
                     local generalChannel = TextChatService.TextChannels:FindFirstChild("RBXGeneral")
-                    if generalChannel then generalChannel:SendAsync("J Hub on top") end
+                    if generalChannel then generalChannel:SendAsync("OH-DUELS ON TOP BY ORCALERITO") end
                 end)
                 if not success then
                     pcall(function()
@@ -1790,7 +1790,7 @@ tpDownBtn:GetPropertyChangedSignal("Position"):Connect(function()
 end)
 
 -- ============================================================
--- [[ J HUB AUTO TP DOWN MOBILE UI (integrated) ]] --
+-- [[ OH-HUB AUTO TP DOWN MOBILE UI (integrated) ]] --
 -- ============================================================
 do
     local autoTPGui = Instance.new("ScreenGui")
@@ -2445,7 +2445,7 @@ end
 local menuOpen = false
 local menuPanel = nil
 
--- Create the new square rounded menu button with "J"
+-- Create the new square rounded menu button with "OH"
 local MenuBtn = Instance.new("TextButton", HUDScreen)
 MenuBtn.Size = UDim2.new(0, 50, 0, 50)  -- Square button
 -- Position: centered on the row where original menu button was (original x offset -55 with width 130 gave left edge -120, center -55)
